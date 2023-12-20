@@ -36,10 +36,13 @@ public class App {
 
 			} else if (cmd.equals("목록")) {
 				if (wiseSayings.size() == 0) {
-					System.out.println("등록 된 명언이 없어");
+					System.out.println("등록 된 명언이 없습니다.");
 				} else {
-					System.out.println("있던데???");
-					System.out.println("등록 된 명언 수 : " + wiseSayings.size());
+					System.out.printf("등록 된 명언 수가 %s개 있습니다.: \n", wiseSayings.size());
+
+					for (int i = wiseSayings.size() - 1; i >= 0; i--) {
+						System.out.println(wiseSayings.get(i));
+					}
 				}
 			} else {
 				System.out.println("존재하지 않는 명령어입니다");
