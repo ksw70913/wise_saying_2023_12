@@ -1,6 +1,11 @@
+package com.ws;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
+
+import com.ws.wiseSaying.entity.WiseSaying;
+
 
 public class App {
 	private Scanner sc;
@@ -48,6 +53,5 @@ public class App {
 				System.out.println("존재하지 않는 명령어입니다");
 			}
 		}
-
 	}
 }
