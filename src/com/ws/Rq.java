@@ -24,7 +24,7 @@ public class Rq {
 		for (String paramStr : paramBits) {
 			String[] paramStrBits = paramStr.split("=", 2);
 
-			if (paramBits.length == 1) {
+			if (paramStrBits.length == 1) {
 				continue;
 			}
 
