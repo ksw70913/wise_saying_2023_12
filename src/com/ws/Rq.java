@@ -15,6 +15,10 @@ public class Rq {
 
 		params = new HashMap<>();
 
+		if (cmdBits.length == 1) {
+			return;
+		}
+
 		String[] paramBits = cmdBits[1].split("&");
 
 		for (String paramStr : paramBits) {
@@ -23,6 +27,7 @@ public class Rq {
 			String value = paramStrBits[1];
 			params.put(key, value);
 		}
+
 	}
 
 	public String getActionCode() {
