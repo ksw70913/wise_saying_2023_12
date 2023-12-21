@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.ws.Container;
+import com.ws.Rq;
 import com.ws.wiseSaying.entity.WiseSaying;
 
 public class WiseSayingController {
@@ -43,13 +44,19 @@ public class WiseSayingController {
 
 				System.out.printf("%d  /  %s  /  %s\n", ws.getId(), ws.getAuthor(), ws.getContent());
 			}
-
 		}
-
 	}
 
-	public void remove() {
+	public void remove(Rq rq) {
+		int id = -1;
 
+		try {
+			id = Integer.parseInt(rq.getParam("id"));
+			System.out.println(id);
+		} catch (NumberFormatException e) {
+			System.out.printf("id(정수)를 제대로 입력해주세요\n", id);
+			return;
+		}
+		System.out.printf("%d번 명언이 삭제되었습니다.\n", id);
 	}
-
 }
