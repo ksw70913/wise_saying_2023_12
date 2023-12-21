@@ -11,11 +11,6 @@ public class WiseSaying {
 		this.author = author;
 	}
 
-	@Override
-	public String toString() {
-		return "번호: " + id + ", 명언: " + content + ", 작가: " + author + "";
-	}
-
 	public int getId() {
 		return id;
 	}
