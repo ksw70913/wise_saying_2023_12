@@ -11,7 +11,6 @@ public class WiseSayingRepository {
 	private List<WiseSaying> wiseSayings;
 
 	public WiseSayingRepository() {
-
 		lastWiseSayingId = 0;
 		wiseSayings = new ArrayList<>();
 	}
